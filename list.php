@@ -10,6 +10,8 @@
     $sql = "SELECT * FROM location ORDER BY id";
 	$result = $mysqli -> query($sql);    
 
+    echo "<p align='center'><a href='form-add.php'>+ เพิ่มพิกัด</a></p>";
+
     echo "<table align='center' border='1' width='50%'>";
     echo "<tr>";
     echo "<th>id</th>";
@@ -19,10 +21,10 @@
     echo "</tr>";
     while($row = $result -> fetch_array(MYSQLI_ASSOC)) {
         echo "<tr>";
-        echo "<td>".$row["id"]."</td>";
-        echo "<td>".$row["name"]."</td>";
-        echo "<td>".$row["lat"]."</td>";
-        echo "<td>".$row["lon"]."</td>";
+        echo "<td align='center'>".$row["id"]."</td>";
+        echo "<td align='center'>".$row["name"]."</td>";
+        echo "<td align='center'>".$row["lat"]."</td>";
+        echo "<td align='center'>".$row["lon"]."</td>";
         echo "</tr>";
     }
     echo "</table>";
