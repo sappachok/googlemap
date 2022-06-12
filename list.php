@@ -8,8 +8,23 @@
     }
 
     $sql = "SELECT * FROM location ORDER BY id";
-	$result = $mysqli -> query($sql);
+	$result = $mysqli -> query($sql);    
 
-    var_dump($result);
+    echo "<table align='center' border='1' width='50%'>";
+    echo "<tr>";
+    echo "<th>id</th>";
+    echo "<th>name</th>";
+    echo "<th>latitude</th>";
+    echo "<th>longitude</th>";
+    echo "</tr>";
+    while($row = $result -> fetch_array(MYSQLI_ASSOC)) {
+        echo "<tr>";
+        echo "<td>".$row["id"]."</td>";
+        echo "<td>".$row["name"]."</td>";
+        echo "<td>".$row["lat"]."</td>";
+        echo "<td>".$row["lon"]."</td>";
+        echo "</tr>";
+    }
+    echo "</table>";
 
 ?>
