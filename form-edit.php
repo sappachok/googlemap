@@ -15,7 +15,11 @@
     $row = $result -> fetch_array(MYSQLI_ASSOC)
 ?>    
 
-<form action="insert.php" method="post">
+<form action="update.php" method="post">
+    <p>
+        <label>Id</label><br>        
+        <input type="text" name="id" value="<?php echo $row["id"]; ?>">
+    </p>    
     <p>
         <label>Name</label><br>        
         <input type="text" name="name" value="<?php echo $row["name"]; ?>">
