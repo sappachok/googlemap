@@ -18,6 +18,7 @@
     echo "<th>name</th>";
     echo "<th>latitude</th>";
     echo "<th>longitude</th>";
+    echo "<th>action</th>";
     echo "</tr>";
     while($row = $result -> fetch_array(MYSQLI_ASSOC)) {
         echo "<tr>";
@@ -25,6 +26,7 @@
         echo "<td align='center'>".$row["name"]."</td>";
         echo "<td align='center'>".$row["lat"]."</td>";
         echo "<td align='center'>".$row["lon"]."</td>";
+        echo "<td align='center'>[<a href='form-edit.php?id=".$row["id"]."'>Edit</a>] [<a href='form-delete.php?id=".$row["id"]."'>Delete</a>]</td>";
         echo "</tr>";
     }
     echo "</table>";
