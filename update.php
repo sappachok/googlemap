@@ -21,7 +21,7 @@
         echo "Longitude: $lon<br>";
 
         $sql = "UPDATE location
-            SET name='$name',lat='$lat',lon'$lon'
+            SET name='$name',lat='$lat',lon='$lon'
             WHERE id='$id'
         ";        
 
